@@ -14,7 +14,7 @@ export default function Create() {
         Create Form Student
       </h1>
       <form
-        onSubmit={handleSubmit}
+        onSubmit={(e) => {handleSubmit(e, name, apellido, email, password)}}
         className="bg-zinc-800 flex flex-col w-1/2 place-content-center p-8 rounded-md"
       >
         <label htmlFor="name" className="block text-white font-semibold">
@@ -27,7 +27,7 @@ export default function Create() {
               setName(e.target.value);
             }}
             id="name"
-            className="mb-4 rounded-lg w-full h-10"
+            className="mb-4 rounded-lg w-full h-10 text-black"
           />
         </label>
 
@@ -41,7 +41,7 @@ export default function Create() {
               setApellido(e.target.value);
             }}
             id="apellido "
-            className="mb-4 rounded-lg w-full h-10"
+            className="mb-4 rounded-lg w-full h-10 text-black"
           />
         </label>
 
@@ -55,7 +55,7 @@ export default function Create() {
               setEmail(e.target.value);
             }}
             id="email"
-            className="mb-4 rounded-lg w-full h-10"
+            className="mb-4 rounded-lg w-full h-10 text-black"
           />
         </label>
 
@@ -69,7 +69,7 @@ export default function Create() {
               setPassword(e.target.value);
             }}
             id="password"
-            className="mb-4 rounded-lg w-full h-10"
+            className="mb-4 rounded-lg w-full h-10 text-black"
           />
         </label>
         
