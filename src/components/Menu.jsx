@@ -13,7 +13,7 @@ export default function Menu(){
               Crear
             </Link>
             <Link className="text-white font-bold text-xl mr-12" to="/View">
-              Ver
+              Contenidos
             </Link>
           </ul>
         </div>

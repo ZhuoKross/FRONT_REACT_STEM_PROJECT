@@ -54,8 +54,8 @@ export async function getDataContent(){
             
     });
 
-    //console.log(result);
-    return result
+    console.log(result);
+    //return result
     
     }catch(e){
 
@@ -74,4 +74,4 @@ export async function getDataContent(){
 
 
 
-//getDataContent();
+getDataContent();
