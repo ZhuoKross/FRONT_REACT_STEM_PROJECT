@@ -5,10 +5,10 @@ import { Outlet } from "react-router-dom";
 
 export default function Home() {
   return (
-    <>
-    <Menu />
+    <div className="flex h-full w-full">
+      <Menu />
 
-    <Outlet />
-    </>
+      <Outlet />
+    </div>
   );
 }
