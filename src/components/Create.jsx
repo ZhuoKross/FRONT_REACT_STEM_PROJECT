@@ -9,7 +9,7 @@ export default function Create() {
   const [apellido, setApellido] = useState("");
 
   return (
-    <div className="flex flex-col items-center place-content-center">
+    <div className="flex flex-col items-center place-content-center w-full">
       <h1 className="text-3xl text-zinc-800 font-bold text-center mt-20 mb-2">
         Create Form Student
       </h1>
