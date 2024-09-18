@@ -1,5 +1,5 @@
 import React from "react";
-
+import AsideContentComponent from "./AsideContentComponent";
 
 
 export default function SkeletonContent(props){
@@ -12,6 +12,9 @@ export default function SkeletonContent(props){
 
     return(
         <div className="w-3/4 h-72 flex flex-row mb-6 mr-8  bg-bg-white-200 rounded-md shadow-xl" id="main-container-card">
+
+            <AsideContentComponent />
+
             <div className="flex flex-col h-full w-2/3" id="container-content">
                 {/* Title card */}
                 <a href={props.link} className="text-2xl font-thin hover:underline ml-6 mt-3"> {props.title} </a>
