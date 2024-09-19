@@ -13,7 +13,7 @@ export default function Search({onSearch}){
         onSearch(searchTerm)
     }
 
-    console.log("Desde search component: ", searchTerm)
+    //console.log("Desde search component: ", searchTerm)
     
     return (
         

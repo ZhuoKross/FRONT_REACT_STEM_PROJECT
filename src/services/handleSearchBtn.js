@@ -2,7 +2,7 @@
 
 export default async function handleSearch(searchTerm){
     // VERIFICACIÓN DE LA OBTENCIÓN DEL TÉRMINO DE BÚSQUEDA
-    console.log("El término de búsqueda es: ", searchTerm)
+    //console.log("El término de búsqueda es: ", searchTerm)
 
     //CREACIÓN DEL FETCH PARA MANDAR EL TÉRMINO DE BÚSQUEDA AL SCRIPT
     const response = await fetch(

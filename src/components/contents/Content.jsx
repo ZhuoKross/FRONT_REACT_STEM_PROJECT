@@ -8,7 +8,7 @@ export default function Content() {
   const [resultados, setResultados] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  console.log("1: ", resultados)
+  //console.log("1: ", resultados)
 
   const handleSearchResults = async (searchTerm) => {
     
@@ -20,7 +20,7 @@ export default function Content() {
       
       const response = await handleSearch(searchTerm)
 
-      console.log("los articulos buscados son: ", response);
+      //console.log("los articulos buscados son: ", response);
       setResultados(response);
 
 
@@ -48,7 +48,8 @@ export default function Content() {
                 journal = {article.journal}
                 summary={article.summary}
                 author={article.author}
-                key={i}
+                key={article.id}
+                article_id={article.id}
             />
           );
         })}
