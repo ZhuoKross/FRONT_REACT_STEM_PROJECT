@@ -1,9 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import profile_img from "../assets/profile_img_03.jpg"
-import { StarIcon, CalendarDaysIcon, BookOpenIcon, ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/outline";
+import fetchContent from "../services/fetchFavoriteContent";
+import { useState } from "react";
+import { CalendarDaysIcon, BookOpenIcon, ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/outline";
+import FavoriteLink from "./contents/links/FavoriteLink";
 
 export default function Menu(){
+
+
+    const id_estudiante = 1;
+
+    const handleClickEventFavorite = async ()=>{
+        try{
+          
+          const res = await fetchContent(id_estudiante);
+
+          console.log("Los datos del fetch (Menu) son: ", res);
+
+
+        }catch(e){
+          throw new Error("Error al traer contenido (Menu)", e);
+        }
+    }
+
+
 
     const imgProfileStyle = {
       backgroundImage: `url(${profile_img})`,
@@ -42,14 +63,7 @@ export default function Menu(){
 
 
             {/* Link Favoritos */}
-          <div className="flex w-full items-center hover:bg-zinc-200">
-            <StarIcon className="h-8 w-8 ml-2"/>
-            <Link 
-                className="text-zinc-700 font-bold text-xl p-6 w-full" 
-                to="/Favorite">
-                  Favoritos
-            </Link>
-          </div>
+            <FavoriteLink onfetchContet={handleClickEventFavorite}/>
 
             {/* Link Actividades */}
             <div className="flex w-full items-center hover:bg-zinc-200">
