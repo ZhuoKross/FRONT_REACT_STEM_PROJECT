@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { StarIcon } from "@heroicons/react/24/outline";
 
-export default function ({onfetchContet}){
+//{onfetchContet}
 
-    const handleClickfavorite = ()=>{
+export default function (){
 
-        onfetchContet();
+    // const handleClickfavorite = ()=>{
 
-    }
+    //     onfetchContet();
+
+    // }
 
 
     return(
@@ -18,7 +20,7 @@ export default function ({onfetchContet}){
             <Link 
                 className="text-zinc-700 font-bold text-xl p-6 w-full" 
                 to="/Favorite"
-                onClick = {handleClickfavorite}
+                
                 >
                   Favoritos
             </Link>
@@ -26,3 +28,5 @@ export default function ({onfetchContet}){
     );
 
 }
+
+//onClick = {handleClickfavorite}

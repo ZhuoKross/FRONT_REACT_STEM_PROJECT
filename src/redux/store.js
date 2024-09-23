@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+import contentReducer from "./contentSlice";
 
-export const store = configureStore(
+
+const store = configureStore(
     {
         reducer:{
-            esudiante: estudianteReducer
+            content: contentReducer 
         }
     }
 )
+
+export default store;

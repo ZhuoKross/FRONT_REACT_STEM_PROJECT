@@ -1,28 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import profile_img from "../assets/profile_img_03.jpg"
-import fetchContent from "../services/fetchFavoriteContent";
-import { useState } from "react";
+//import fetchContent from "../services/fetchFavoriteContent";
+//import { useState } from "react";
 import { CalendarDaysIcon, BookOpenIcon, ArrowRightEndOnRectangleIcon } from "@heroicons/react/24/outline";
 import FavoriteLink from "./contents/links/FavoriteLink";
 
 export default function Menu(){
 
 
-    const id_estudiante = 1;
+    // const id_estudiante = 1;
 
-    const handleClickEventFavorite = async ()=>{
-        try{
+    // const handleClickEventFavorite = async ()=>{
+    //     try{
           
-          const res = await fetchContent(id_estudiante);
+    //       const res = await fetchContent(id_estudiante);
 
-          console.log("Los datos del fetch (Menu) son: ", res);
+    //       console.log("Los datos del fetch (Menu) son: ", res);
 
 
-        }catch(e){
-          throw new Error("Error al traer contenido (Menu)", e);
-        }
-    }
+    //     }catch(e){
+    //       throw new Error("Error al traer contenido (Menu)", e);
+    //     }
+    // }
 
 
 
@@ -63,7 +63,8 @@ export default function Menu(){
 
 
             {/* Link Favoritos */}
-            <FavoriteLink onfetchContet={handleClickEventFavorite}/>
+            {/* onfetchContet={handleClickEventFavorite} */}
+            <FavoriteLink />
 
             {/* Link Actividades */}
             <div className="flex w-full items-center hover:bg-zinc-200">
